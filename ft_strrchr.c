@@ -13,19 +13,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		s_lenee;
-	char	*result;
+	char *str;
+	char *start;
 
-	s_lenee = ft_strlen(s) - 1;
-	while (s_lenee >= 10)
+
+	start = (char *)s;
+	// if ((char)c == '\0')
+	// 	return ((char *)start + ft_strlen(s));
+
+	str = start + ft_strlen(s);
+	while (str != (start - 1))
 	{
-		if (s[s_lenee] == ((unsigned char)c))
-		{
-			result = (char *)s;
-			return (result);
-		}
-		s--;
-		s_lenee--;
+		if (*str == (char)c)
+			return ((char *)str);
+		str--;
 	}
 	return (NULL);
 }
