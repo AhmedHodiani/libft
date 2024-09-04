@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 11:41:54 by ataher            #+#    #+#             */
-/*   Updated: 2024/09/04 14:48:26 by ataher           ###   ########.fr       */
+/*   Updated: 2024/09/04 15:05:55 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,6 @@ static	int	ft_strlen_till_delimiter(char const *s, char delimiter)
 	while (s[i] && s[i] != delimiter)
 		i++;
 	return (i);
-}
-
-static char	*ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
 }
 
 char	**ft_split(char const *s, char c)
