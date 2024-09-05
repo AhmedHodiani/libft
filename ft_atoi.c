@@ -38,6 +38,5 @@ int	ft_atoi(const char *nptr)
 		result += nptr[i] - '0';
 		i++;
 	}
-	result *= sign;
-	return (result);
+	return (result * sign);
 }
