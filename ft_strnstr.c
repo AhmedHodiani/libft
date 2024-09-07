@@ -3,34 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdarawsh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 18:02:37 by mdarawsh          #+#    #+#             */
-/*   Updated: 2024/09/05 12:41:52 by mdarawsh         ###   ########.fr       */
+/*   Updated: 2024/09/07 10:53:37 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	if (little == NULL)
-		return (NULL);
-	if (little[0] == '\0')
+	size_t	little_indexor;
+	size_t	big_indexor;
+	size_t	big_buffer_indexor;
+
+	if (!*little)
 		return ((char *)big);
-	if (big == NULL || len == 0)
-		return (NULL);
-	i = 0;
-	while (i < len && big[i] != '\0')
+	big_indexor = 0;
+	big_buffer_indexor = 0;
+	little_indexor = 0;
+	while (big[big_indexor] && big_indexor < len)
 	{
-		j = 0;
-		while (big[i + j] == little[j] && i + j < len && little[j] != '\0')
-			j++;
-		if (little[j] == '\0')
-			return ((char *)(big + i));
-		i++;
+		little_indexor = 0;
+		while (little[little_indexor] && big_indexor < len)
+		{
+			if (little[little_indexor] != big[big_indexor])
+				break ;
+			little_indexor++;
+			big_indexor++;
+			if (!little[little_indexor])
+				return ((char *)&big[big_buffer_indexor]);
+		}
+		big_indexor = ++big_buffer_indexor;
 	}
 	return (NULL);
 }
