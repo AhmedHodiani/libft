@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 11:41:54 by ataher            #+#    #+#             */
-/*   Updated: 2024/09/04 15:05:55 by ataher           ###   ########.fr       */
+/*   Updated: 2024/09/07 09:50:08 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,11 @@ static	int	ft_strlen_till_delimiter(char const *s, char delimiter)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+char	**get_strings(char **result, int wordcount, char const *s, char c)
 {
-	int		wordcount;
-	int		word;
 	int		wordlen;
-	char	**result;
-
-	wordcount = ft_wordcount(s, c);
-	result = malloc(sizeof(char *) * (wordcount + 1));
-	if (!result)
-		return (NULL);
+	int		word;
+	char	*str;
 
 	word = 0;
 	while (word < wordcount)
@@ -56,7 +50,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		wordlen = ft_strlen_till_delimiter(s, c);
-		char *str = malloc(sizeof(char) * (wordlen + 1));
+		str = malloc(sizeof(char) * (wordlen + 1));
 		if (!str)
 			return (NULL);
 		ft_strlcpy(str, s, wordlen + 1);
@@ -65,6 +59,18 @@ char	**ft_split(char const *s, char c)
 		word++;
 	}
 	result[word] = NULL;
+	return (result);
+}
 
+char	**ft_split(char const *s, char c)
+{
+	int		wordcount;
+	char	**result;
+
+	wordcount = ft_wordcount(s, c);
+	result = malloc(sizeof(char *) * (wordcount + 1));
+	if (!result)
+		return (NULL);
+	get_strings(result, wordcount, s, c);
 	return (result);
 }
