@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 11:07:05 by ataher            #+#    #+#             */
-/*   Updated: 2024/09/05 11:07:16 by ataher           ###   ########.fr       */
+/*   Updated: 2024/09/07 09:23:41 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ char    *ft_itoa(int n)
     char *str;
     int is_negative;
 
-    if (n == -2147483648)
-        return ft_strdup("-2147483648");
+    if (n == MAX_NG_INT)
+        return ft_strdup(MAX_NG_STR);
     digits = ft_number_of_digits(n);
     is_negative = (n < 0) ? 1 : 0;
     n = (n < 0) ? -n : n;

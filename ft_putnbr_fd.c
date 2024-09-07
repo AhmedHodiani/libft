@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 09:03:17 by ataher            #+#    #+#             */
-/*   Updated: 2024/09/07 09:19:35 by ataher           ###   ########.fr       */
+/*   Updated: 2024/09/07 09:23:23 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == MAX_NG_INT)
 	{
-		ft_putstr_fd("-2147483648", fd);
+		ft_putstr_fd(MAX_NG_STR, fd);
 		return ;
 	}
 	if (n < 0)

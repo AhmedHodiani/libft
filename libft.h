@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 10:58:00 by ataher            #+#    #+#             */
-/*   Updated: 2024/09/07 09:03:42 by ataher           ###   ########.fr       */
+/*   Updated: 2024/09/07 09:23:17 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+
+# define MAX_NG_INT -2147483648
+# define MAX_NG_STR "-2147483648"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int i);
