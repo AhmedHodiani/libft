@@ -7,7 +7,7 @@ SRCS		= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 OBJS		= $(SRCS:.c=.o)
 
 
-CC		= gcc
+CC		= cc
 CFLAGS		= -Wall -Wextra -Werror -I.
 NAME		= libft.a
 
