@@ -6,11 +6,13 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 11:07:05 by ataher            #+#    #+#             */
-/*   Updated: 2024/09/04 11:07:16 by ataher           ###   ########.fr       */
+/*   Updated: 2024/09/07 15:14:38 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char const *s)
+#include "libft.h"
+
+size_t	ft_strlen(char const *s)
 {
 	int	i;
 
