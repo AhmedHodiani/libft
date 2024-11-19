@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atof.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 08:44:58 by ataher            #+#    #+#             */
-/*   Updated: 2024/11/19 09:15:32 by ataher           ###   ########.fr       */
+/*   Created: 2024/11/19 08:59:01 by ataher            #+#    #+#             */
+/*   Updated: 2024/11/19 09:15:18 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_atof(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	double	result;
-	int			sign;
-	double	dot;
-
-	sign = 1;
-	dot = 1.0;
-	result = 0.0;
-	while (*str)
+	while (*s1 == *s2)
 	{
-		if (*str == '-')
-			sign = -1;
-		else if (*str == '+')
-			sign = 1;
-		if (*str == '-' || *str == '+')
-			++str;
-		else if (*str == '.')
-			dot *= 10.0;
-		else if (*str >= '0' && *str <= '9')
-		{
-			result = (result * 10.0) + (*str - '0');
-			dot *= 10.0;
-		}
-		str++;
+		if (*s1 == '\0')
+			return (0);
+		s1++;
+		s2++;
 	}
-	return (result / dot * sign);
+	return (*s1 - *s2);
 }
