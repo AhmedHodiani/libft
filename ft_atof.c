@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 08:44:58 by ataher            #+#    #+#             */
-/*   Updated: 2024/11/19 13:13:01 by ataher           ###   ########.fr       */
+/*   Updated: 2024/11/21 13:59:50 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ double	ft_atof(char *str)
 		}
 		str++;
 	}
+	if (dot == 0)
+		return (result * sign);
 	return ((result / dot) * sign);
 }
