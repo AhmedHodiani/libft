@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 10:58:00 by ataher            #+#    #+#             */
-/*   Updated: 2024/11/19 09:39:04 by ataher           ###   ########.fr       */
+/*   Updated: 2024/12/11 16:16:02 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "ft_printf/include/ft_printf.h"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int i);
