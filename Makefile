@@ -12,14 +12,9 @@ CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -I.
 NAME		= libft.a
 
-PRINTFNAME	= libftprintf.a
-PRINTFDIR	= ft_printf
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	make -C ${PRINTFDIR}
-	mv ${PRINTFDIR}/${PRINTFNAME} ./${NAME}
 	ar rcs $(NAME) $(OBJS)
 
 obj/%.o: %.c
@@ -27,11 +22,9 @@ obj/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	make -C ${PRINTFDIR} clean
 	rm -rf obj
 
 fclean: clean
-	make -C ${PRINTFDIR} fclean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
