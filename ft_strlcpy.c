@@ -6,11 +6,11 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 10:21:24 by mdarawsh          #+#    #+#             */
-/*   Updated: 2024/09/04 15:11:32 by ataher           ###   ########.fr       */
+/*   Updated: 2024/12/15 14:07:44 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "include/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

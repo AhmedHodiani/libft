@@ -6,11 +6,11 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 08:59:01 by ataher            #+#    #+#             */
-/*   Updated: 2024/11/19 09:15:18 by ataher           ###   ########.fr       */
+/*   Updated: 2024/12/15 14:07:44 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "include/libft.h"
 
 int	ft_strcmp(char *s1, char *s2)
 {

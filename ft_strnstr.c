@@ -6,11 +6,11 @@
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 18:02:37 by mdarawsh          #+#    #+#             */
-/*   Updated: 2024/09/08 12:50:16 by ataher           ###   ########.fr       */
+/*   Updated: 2024/12/15 14:07:44 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "include/libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
