@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 15:06:41 by mdarawsh          #+#    #+#             */
-/*   Updated: 2024/12/15 14:07:44 by ataher           ###   ########.fr       */
+/*   Created: 2024/11/19 08:44:58 by ataher            #+#    #+#             */
+/*   Updated: 2024/12/15 15:43:52 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft.h"
+#include "../include/libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+double	ft_atof(char *str)
 {
-	unsigned char	*p1;
-	unsigned char	*p2;
+	double	result;
+	int		sign;
+	int		dot;
 
-	p1 = (unsigned char *)s1;
-	p2 = (unsigned char *)s2;
-	while (n--)
+	sign = 1;
+	dot = 0;
+	result = 0.0;
+	while (*str)
 	{
-		if (*p1 != *p2)
+		if (*str == '-')
+			sign *= -1;
+		else if (*str == '.')
+			dot = 1;
+		else if (*str >= '0' && *str <= '9')
 		{
-			return (*p1 - *p2);
+			result = (result * 10.0) + (*str - '0');
+			if (dot)
+				dot *= 10.0;
 		}
-		p1++;
-		p2++;
+		str++;
 	}
-	return (0);
+	if (dot == 0)
+		return (result * sign);
+	return ((result / dot) * sign);
 }
