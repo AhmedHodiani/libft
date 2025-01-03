@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ataher <ataher@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ataher <ataher@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 15:21:25 by mdarawsh          #+#    #+#             */
-/*   Updated: 2024/12/15 15:43:52 by ataher           ###   ########.fr       */
+/*   Updated: 2025/01/04 02:46:03 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[len] = '\0';
 	return (ptr);
 }
-//      s       start           len
-
-//      ""        1               0
-
-//      ""        1               1
-
-//      ""        0               0
-
-//      ""        0               1
