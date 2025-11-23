@@ -17,7 +17,17 @@ SRCS			= src/ft_atoi.c src/ft_bzero.c \
 					src/ft_toupper.c src/ft_itoa.c \
 					src/ft_strmapi.c src/ft_striteri.c \
 					src/ft_putchar_fd.c src/ft_putendl_fd.c \
-					src/ft_atof.c src/ft_strcmp.c
+					src/ft_atof.c src/ft_strcmp.c \
+					src/gc_itoa.c  \
+					src/gc_split.c  \
+					src/gc_strdup.c  \
+					src/gc_strjoin_delim.c  \
+					src/gc_strjoin.c  \
+					src/gc_strmapi.c  \
+					src/gc_strtrim.c  \
+					src/gc_substr.c
+
+
 OBJS			= $(SRCS:src/%.c=$(BUILD_PATH)/obj/%.o)
 
 CC				= cc
