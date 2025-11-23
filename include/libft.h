@@ -6,7 +6,7 @@
 /*   By: ataher <ataher@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 10:58:00 by ataher            #+#    #+#             */
-/*   Updated: 2025/11/23 13:00:42 by ataher           ###   ########.fr       */
+/*   Updated: 2025/11/23 23:22:47 by ataher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,5 @@ char	*gc_strjoin(char const *s1, char const *s2);
 char	*gc_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*gc_strtrim(char const *s1, char const *set);
 char	*gc_substr(char const *s, unsigned int start, size_t len);
-
 
 #endif
